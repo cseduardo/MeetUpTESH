@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MeetUpTESH.Imagenes"
+             Title="Imagenes">
+    <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Button x:Name="downloadButton" 
+                    Text="Ver Imagenes" 
+                    Clicked="OnDownloadImageButtonClicked"
+                    BackgroundColor="#0078D7"
+                    TextColor="White"
+                    BorderRadius="15"
+                    Grid.Row="0"/>
+        <Image x:Name="imagenesblobl" Grid.Row="1" Aspect="AspectFit" VerticalOptions="Center" HorizontalOptions="Center"/>
+            <StackLayout Margin="20" Grid.Row="2">
+                <ScrollView >
+                    <ListView x:Name="listView" ItemSelected="OnListViewItemSelected" ></ListView>
+                </ScrollView>
+            </StackLayout>
+        
+    </Grid>
+</ContentPage>

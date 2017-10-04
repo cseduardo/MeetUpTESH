@@ -49,6 +49,12 @@ namespace MeetUpTESH
             });
             masterPageItems.Add(new TodoMenuItem
             {
+                Title = "Computer Vision",
+                //IconSource = "reminders.png",
+                TargetType = typeof(CSCV)
+            });
+            masterPageItems.Add(new TodoMenuItem
+            {
                 Title = "Otros",
                 //IconSource = "reminders.png",
                 TargetType = typeof(Otros)

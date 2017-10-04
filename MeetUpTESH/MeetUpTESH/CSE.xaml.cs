@@ -19,10 +19,10 @@ namespace MeetUpTESH
 		{
 			InitializeComponent ();
 		}
-        async void btnPicture_Clicked(object sender, EventArgs e) //crea un evento asincrono y vacio
+        async void btnPicture_Clicked(object sender, EventArgs e) //crea un evento  de un boton asincrono y vacio
         {
             var useCam = ((Button)sender).Text.Contains("Cámara"); //crea la variable useCam va a enviar datos y va a contener el texto "Camara"
-            var file = await ServiceImage.TakePicture(useCam); // crea una variable para guardar la foto que se está tomando y está contenida en useCam
+            var file = await ServiceImage.TakePicture(useCam); // crea una variable para regresar el valor de file q se obtuvo de ServiceImage
             Results.Children.Clear();
             lblResult.Text = "---";
 

@@ -15,10 +15,7 @@ namespace MeetUpTESH
     public partial class CSCV : ContentPage
     {
         static Stream streamCopy;
-        public CSCV()
-        {
-            InitializeComponent();
-        }
+
         async void btnPicture_Clicked(object sender, EventArgs e)
         {
             var useCam = ((Button)sender).Text.Contains("Cámara");
@@ -33,6 +30,10 @@ namespace MeetUpTESH
                 file.Dispose();
                 return stream;
             });
+        }
+        public CSCV()
+        {
+            InitializeComponent();
         }
         async void btnAnalysisImage_Clicked(object sender, EventArgs e)
         {
